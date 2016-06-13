@@ -4,15 +4,36 @@
 // Make sure to look at hello-world.spec.js--that should give you some hints about what is
 // expected here.
 
-var HelloWorld = function(name) {};
+// New ES6 Way
 
-HelloWorld.prototype.hello = function(input) {
-  let output = '';
-  if (name === '') {
-    output = 'world';
+// class HelloWorld {
+//   hello(input) {
+//     return `Hello, ${input || 'World'}`
+//   }
+// }
+// let echo = new HelloWorld;
+// console.log(echo.hello('Meowkins')); // Hello, Meowkins
+
+// Old Pre-ES6 Way
+function HelloWorld() {
+  if (!(this instanceof HelloWorld)) {
+    throw new Error('Cannot call a class as a function');
   }
-  output = input;
-  return `Hello, ${output}!`;
+}
+HelloWorld.prototype.hello = function (input) {
+  return `Hello, ${input || 'World'}`;
 };
 
+const herro = new HelloWorld;
+console.log(herro.hello('')); // Hello, World
+console.log(herro.hello()); // Hello, World
+console.log(herro.hello('James')); // Hello, James
+
 module.exports = HelloWorld;
+
+
+// function hello(input) {
+//   return `Hello, ${input || 'World'}`;
+// }
+// hello(); // Hello, world!
+// hello('James'); // Hello, James!
