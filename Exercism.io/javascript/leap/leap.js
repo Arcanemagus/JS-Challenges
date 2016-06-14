@@ -1,22 +1,20 @@
 // Leap Year Calcualtor
-// 1. If the year is evenly divisible by 4, go to step 2. Otherwise, go to step 5.
-// 2. If the year is evenly divisible by 100, go to step 3. Otherwise, go to step 4.
-// 3. If the year is evenly divisible by 400, go to step 4. Otherwise, go to step 5.
-// 4. The year is a leap year (it has 366 days).
-// 5. The year is not a leap year (it has 365 days).
+// If the year is divisible by 4 but not 100 it is a leap year.
+// If the year is divisible by 4, 100, and 400 it is a leap year.
 
-function isLeapYear(year) {
-  if (year % 4 === 0) {
-    if (year % 100 === 0) {
-      if (year % 400 === 0) {
-        return true;
-      }
-      return false;
+class Year {
+  isLeap(year) {
+    if (year % 100 === 0 && year % 400 === 0 || year % 4 === 0 && year % 100 !== 0) {
+      return true;
     }
-    return true;
+    return false;
   }
-  return false;
 }
 
-isLeapYear(2016); // true
-isLeapYear(1900); // false
+const year = new Year;
+console.log(year.isLeap(1600)); // True
+console.log(year.isLeap(2000)); // True
+console.log(year.isLeap(2400)); // True
+console.log(year.isLeap(1700)); // False
+console.log(year.isLeap(1800)); // False
+console.log(year.isLeap(2600)); // False
