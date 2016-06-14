@@ -17,3 +17,6 @@ function isLeapYear(year) {
   }
   return false;
 }
+
+isLeapYear(2016); // true
+isLeapYear(1900); // false
