@@ -9,8 +9,7 @@
   "eslintConfig": {
     "rules": {
      "no-unused-vars": 1,
-     "no-console": 0,
-     "no-restricted-syntax": ["error", "FunctionExpression", "WithStatement"]
+     "no-console": 0
    },
     "extends": "airbnb-base",
     "env": {
