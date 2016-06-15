@@ -3,11 +3,11 @@ var Hamming = require('./hamming');
 describe('Hamming', function () {
   var hamming = new Hamming();
 
-  it('no difference between identical strands', function () {
+  xit('no difference between identical strands', function () {
     expect(hamming.compute('A', 'A')).toEqual(0);
   });
 
-  xit('complete hamming distance for single nucleotide strand', function () {
+  it('complete hamming distance for single nucleotide strand', function () {
     expect(hamming.compute('A','G')).toEqual(1);
   });
 
