@@ -32,4 +32,5 @@ const bob = new Bob;
 bob.hey(''); // Fine. Be that way!
 bob.hey('Bob, you suck.'); // Whatever
 bob.hey('Bob, do you suck?'); // Sure.
-bob.hey('BOB YOU SUCK!'); // Whoa, chill out!
+bob.hey('BOB YOU SUCK'); // Whoa, chill out!
+bob.hey('WOW! You suck.'); // Whatever
