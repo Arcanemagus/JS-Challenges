@@ -1,14 +1,35 @@
-//
-// This is only a SKELETON file for the "Bob" exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+class Bob {
+  static isYelling(msg) {
+    let isYelling = !!msg.length;
+    if (isYelling) {
+      for (let i = 0, length = msg.length; i < length; i++) {
+        const character = msg.substr(i, 1);
+        if (character.toLowerCase() === character.toUpperCase()) {
+          continue; // tests if not a letter
+        }
+        isYelling = character === character.toUpperCase();
+        if (!isYelling) {
+          break; // not yelling
+        }
+      }
+    }
+    return isYelling;
+  }
+  hey(msg) {
+    if (msg === undefined || msg === '') {
+      return 'Fine. Be that way!';
+    } else if (msg.includes('?')) {
+      return 'Sure.';
+    } else if (Bob.isYelling(msg)) {
+      return 'Whoa, chill out!';
+    }
+    return 'Whatever.';
+  }
+}
 
-var Bob = function() {};
+const bob = new Bob;
 
-Bob.prototype.hey = function(input) {
-//
-// YOUR CODE GOES HERE
-//
-};
-
-module.exports = Bob;
+bob.hey(''); // Fine. Be that way!
+bob.hey('Bob, you suck.'); // Whatever
+bob.hey('Bob, do you suck?'); // Sure.
+bob.hey('BOB YOU SUCK!'); // Whoa, chill out!
