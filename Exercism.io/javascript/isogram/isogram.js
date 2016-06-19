@@ -1,9 +1,6 @@
 class Isogram {
   isIsogram(word) {
-    if (word.match(/(.).*\1/)) {
-      return true;
-    }
-    return false;
+    return word.match(/(.).*\1/);
   }
 }
 
