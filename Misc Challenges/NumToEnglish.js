@@ -8,7 +8,7 @@ function numToEng(numStr) {
   const dblDigits = ['ten', 'eleven', 'twelve', 'thirteen',
   'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen',
   'nineteen', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty',
-  'seventy', 'eighty', 'ninty'];
+  'seventy', 'eighty', 'ninety'];
   if (numStr.length === 1) {
     const currNum = parseInt(numStr, 10);
     const newNum = sinDigits[currNum];
