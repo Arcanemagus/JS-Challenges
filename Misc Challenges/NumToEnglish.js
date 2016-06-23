@@ -2,53 +2,30 @@
 // 2 ---two
 // 87 --- eighty seven
 
-function numToEng(numStr) {
-  const sinDigits = ['zero', 'one', 'two', 'three', 'four',
-  'five', 'six', 'seven', 'eight', 'nine'];
-  const dblDigits = ['ten', 'eleven', 'twelve', 'thirteen',
-  'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen',
-  'nineteen', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty',
-  'seventy', 'eighty', 'ninety'];
-  if (numStr.length === 1) {
-    const currNum = parseInt(numStr, 10);
-    const newNum = sinDigits[currNum];
-    console.log(newNum);
-  } else if (numStr.length === 2 && parseInt(numStr, 10) <= 20) {
-    const currNum = parseInt(numStr, 10);
-    const newNum = dblDigits[currNum - 10];
-    console.log(newNum);
-  } else if (numStr.length === 2 && parseInt(numStr, 10) > 20) {
-    const currNum = numStr.split('');
-    const newNum = currNum[0];
-    const newNum2 = currNum[1];
-    switch (newNum) {
-      case '2':
-        console.log(`${dblDigits[10]} ${sinDigits[newNum2]}`);
-        break;
-      case '3':
-        console.log(`${dblDigits[11]} ${sinDigits[newNum2]}`);
-        break;
-      case '4':
-        console.log(`${dblDigits[12]} ${sinDigits[newNum2]}`);
-        break;
-      case '5':
-        console.log(`${dblDigits[13]} ${sinDigits[newNum2]}`);
-        break;
-      case '6':
-        console.log(`${dblDigits[14]} ${sinDigits[newNum2]}`);
-        break;
-      case '7':
-        console.log(`${dblDigits[15]} ${sinDigits[newNum2]}`);
-        break;
-      case '8':
-        console.log(`${dblDigits[16]} ${sinDigits[newNum2]}`);
-        break;
-      case '9':
-        console.log(`${dblDigits[17]} ${sinDigits[newNum2]}`);
-        break;
-      default:
-        console.log('An Error Occured');
+const stringNumbers = {
+  0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six',
+  7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve',
+  13: 'thirteen', 14: 'fourteen', 15: 'fifteen', 16: 'sixteen', 17: 'seventeen',
+  18: 'eighteen', 19: 'nineteen', 20: 'twenty', 30: 'thirty', 40: 'fourty', 50: 'fifty',
+  60: 'sixty', 70: 'seventy', 80: 'eighty', 90: 'ninety',
+};
+
+function numToEng(num) {
+  if (num < 21) {
+    console.log(stringNumbers[num]);
+  } else if (num < 100) {
+    const tens = Math.floor(num / 10);
+    if (num - (tens * 10) === 0) {
+      return stringNumbers[num];
     }
+    return `${stringNumbers[tens * 10]} ${stringNumbers[num - tens * 10]}`;
+  } else if (num > 99) {
+    const hundred = Math.floor(num / 100);
+    if (num - (hundred * 100) === 0) {
+      return `${stringNumbers[hundred]} hundred`;
+    }
+    return `${stringNumbers[hundred]} hundred ${/*stopped here*/}`;
   }
 }
-numToEng('77');
+
+console.log(numToEng(101));
