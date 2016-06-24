@@ -15,7 +15,7 @@ function numToEng(inputNum) {
     return stringNumbers[num];
   }
   const output = [];
-  if (num > 100) {
+  if (num >= 100) {
     const hundreds = Math.floor(num / 100);
     num -= hundreds * 100;
     output.push(`${stringNumbers[hundreds]} hundred`);
