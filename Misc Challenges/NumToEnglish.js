@@ -1,7 +1,8 @@
 // Given a number from 0 - 999 ...convert to english...
 // 2 ---two
 // 87 --- eighty seven
-function numToEng(num) {
+function numToEng(inputNum) {
+  let num = inputNum;
   const stringNumbers = {
     0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six',
     7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve',
@@ -12,20 +13,23 @@ function numToEng(num) {
 
   if (num < 21) {
     return stringNumbers[num];
-  } else if (num < 100) {
-    const tens = Math.floor(num / 10);
-    if (num - (tens * 10) === 0) {
-      return stringNumbers[num];
-    }
-    return `${stringNumbers[tens * 10]} ${stringNumbers[num - tens * 10]}`;
-  } else if (num > 99) {
-    const hundred = Math.floor(num / 100);
-    if (num - (hundred * 100) === 0) {
-      return `${stringNumbers[hundred]} hundred`;
-    }
-    return `${stringNumbers[hundred]} hundred ${numToEng(num - (hundred * 100))}`;
   }
-  return 'Invalid Input';
+  const output = [];
+  if (num > 100) {
+    const hundreds = Math.floor(num / 100);
+    num -= hundreds * 100;
+    output.push(`${stringNumbers[hundreds]} hundred`);
+  }
+  if (num > 10) {
+    const tens = Math.floor(num / 10) * 10;
+    num -= tens;
+    output.push(stringNumbers[tens]);
+  }
+  if (num > 0) {
+    output.push(stringNumbers[num]);
+  }
+  return output.join(' ');
 }
 
-console.log(numToEng('123'));
+
+console.log(numToEng('536'));
