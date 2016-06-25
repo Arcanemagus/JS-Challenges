@@ -22,8 +22,4 @@ class Parse {
   }
 }
 
-// const parse = new Parse;
-
-// console.log(parse.query('google.com%2Fsearch%3Fvalue1%3Dfoo%26value2%3Dbar%26value3%3Dbaz'));
-
-module.export = Parse;
+module.exports = Parse;
