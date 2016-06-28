@@ -4,13 +4,14 @@
   "devDependencies": {
     "eslint": "^2.10.2",
     "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.0"
+    "eslint-plugin-import": "^1.8.0",
+    "jasmine-node": "^1.14.5"
   },
   "eslintConfig": {
     "rules": {
-     "no-unused-vars": 1,
-     "no-console": 0
-   },
+      "no-unused-vars": 1,
+      "no-console": 0
+    },
     "extends": "airbnb-base",
     "env": {
       "es6": true,
