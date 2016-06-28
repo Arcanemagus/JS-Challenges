@@ -1,57 +1,57 @@
-var Isogram = require('./isogram');
+const Isogram = require('./isogram');
 
-describe('Isogram Test Suite', function () {
-  it('duplicates', function () {
-    var word = new Isogram('duplicates');
+describe('Isogram Test Suite', () => {
+  it('duplicates', () => {
+    const word = new Isogram('duplicates');
 
-    expect(word.isIsogram()).toEqual(true);
+    expect(word.isIsogram()).toBe(true);
   });
 
-  xit('eleven', function () {
-    var word = new Isogram('eleven');
+  it('eleven', () => {
+    const word = new Isogram('eleven');
 
-    expect(word.isIsogram()).toEqual(false);
+    expect(word.isIsogram()).toBe(false);
   });
 
-  xit('subdermatoglyphic', function () {
-    var word = new Isogram('subdermatoglyphic');
+  it('subdermatoglyphic', () => {
+    const word = new Isogram('subdermatoglyphic');
 
-    expect(word.isIsogram()).toEqual(true);
+    expect(word.isIsogram()).toBe(true);
   });
 
-  xit('Alphabet', function () {
-    var word = new Isogram('Alphabet');
+  it('Alphabet', () => {
+    const word = new Isogram('Alphabet');
 
-    expect(word.isIsogram()).toEqual(false);
+    expect(word.isIsogram()).toBe(false);
   });
 
-  xit('thumbscrew-japingly', function () {
-    var word = new Isogram('thumbscrew-japingly');
+  it('thumbscrew-japingly', () => {
+    const word = new Isogram('thumbscrew-japingly');
 
-    expect(word.isIsogram()).toEqual(true);
+    expect(word.isIsogram()).toBe(true);
   });
 
-  xit('Hjelmqvist-Gryb-Zock-Pfund-Wax', function () {
-    var word = new Isogram('Hjelmqvist-Gryb-Zock-Pfund-Wax');
+  it('Hjelmqvist-Gryb-Zock-Pfund-Wax', () => {
+    const word = new Isogram('Hjelmqvist-Gryb-Zock-Pfund-Wax');
 
-    expect(word.isIsogram()).toEqual(true);
+    expect(word.isIsogram()).toBe(true);
   });
 
-  xit('Heizölrückstoßabdämpfung', function () {
-    var word = new Isogram('Heizölrückstoßabdämpfung');
+  it('Heizölrückstoßabdämpfung', () => {
+    const word = new Isogram('Heizölrückstoßabdämpfung');
 
-    expect(word.isIsogram()).toEqual(true);
+    expect(word.isIsogram()).toBe(true);
   });
 
-  xit('the quick brown fox', function () {
-    var word = new Isogram('the quick brown fox');
+  it('the quick brown fox', () => {
+    const word = new Isogram('the quick brown fox');
 
-    expect(word.isIsogram()).toEqual(false);
+    expect(word.isIsogram()).toBe(false);
   });
 
-  xit('Emily Jung Schwartzkopf', function () {
-    var word = new Isogram('Emily Jung Schwartzkopf');
+  it('Emily Jung Schwartzkopf', () => {
+    const word = new Isogram('Emily Jung Schwartzkopf');
 
-    expect(word.isIsogram()).toEqual(true);
+    expect(word.isIsogram()).toBe(true);
   });
 });

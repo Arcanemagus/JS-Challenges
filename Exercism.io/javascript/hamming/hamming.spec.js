@@ -1,40 +1,39 @@
-var Hamming = require('./hamming');
+const Hamming = require('./hamming');
 
-describe('Hamming', function () {
-  var hamming = new Hamming();
+describe('Hamming', () => {
+  const hamming = new Hamming();
 
-  xit('no difference between identical strands', function () {
-    expect(hamming.compute('A', 'A')).toEqual(0);
+  it('no difference between identical strands', () => {
+    expect(hamming.compute('A', 'A')).toBe(0);
   });
 
-  it('complete hamming distance for single nucleotide strand', function () {
-    expect(hamming.compute('A','G')).toEqual(1);
+  it('complete hamming distance for single nucleotide strand', () => {
+    expect(hamming.compute('A', 'G')).toBe(1);
   });
 
-  xit('complete hamming distance for small strand', function () {
-    expect(hamming.compute('AG','CT')).toEqual(2);
+  it('complete hamming distance for small strand', () => {
+    expect(hamming.compute('AG', 'CT')).toBe(2);
   });
 
-  xit('small hamming distance', function () {
-    expect(hamming.compute('AT','CT')).toEqual(1);
+  it('small hamming distance', () => {
+    expect(hamming.compute('AT', 'CT')).toBe(1);
   });
 
-  xit('small hamming distance in longer strand', function () {
-    expect(hamming.compute('GGACG', 'GGTCG')).toEqual(1);
+  it('small hamming distance in longer strand', () => {
+    expect(hamming.compute('GGACG', 'GGTCG')).toBe(1);
   });
 
-  xit('large hamming distance', function () {
-    expect(hamming.compute('GATACA', 'GCATAA')).toEqual(4);
+  it('large hamming distance', () => {
+    expect(hamming.compute('GATACA', 'GCATAA')).toBe(4);
   });
 
-  xit('hamming distance in very long strand', function () {
-    expect(hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')).toEqual(9);
+  it('hamming distance in very long strand', () => {
+    expect(hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')).toBe(9);
   });
 
-  xit('throws error when strands are not equal length', function() {
-    expect(function() { hamming.compute('GGACGGATTCTG', 'AGGAC'); }).toThrow(
+  it('throws error when strands are not equal length', () => {
+    expect(() => { hamming.compute('GGACGGATTCTG', 'AGGAC'); }).toThrow(
       new Error('DNA strands must be of equal length.')
     );
   });
-
 });
