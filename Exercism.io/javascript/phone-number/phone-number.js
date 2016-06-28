@@ -37,4 +37,6 @@ class PhoneNumber {
 
 const phone = new PhoneNumber;
 
-console.log(phone.toString('15555555555'));
+console.log(phone.number('1-484-954-4521')); // 14849544521
+console.log(phone.toString('12345678901')); // (234) 567-8901
+console.log(phone.areaCode('1-974-514-6658')); // 974
