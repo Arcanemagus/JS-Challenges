@@ -8,10 +8,4 @@ class Year {
   }
 }
 
-const year = new Year;
-console.log(year.isLeap(1600)); // True
-console.log(year.isLeap(2000)); // True
-console.log(year.isLeap(2400)); // True
-console.log(year.isLeap(1700)); // False
-console.log(year.isLeap(1800)); // False
-console.log(year.isLeap(2600)); // False
+module.exports = Year;

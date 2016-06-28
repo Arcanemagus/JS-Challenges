@@ -18,7 +18,4 @@ class Pangram {
   }
 }
 
-const pangram = new Pangram;
-
-pangram.isPangram('the quick brown fox jumps over the lazy dog'); // true
-pangram.isPangram('there is a frightening zerba in the xray room'); // false
+module.exports = Pangram;

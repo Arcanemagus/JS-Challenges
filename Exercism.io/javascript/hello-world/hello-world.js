@@ -24,10 +24,10 @@ HelloWorld.prototype.hello = function (input) {
   return `Hello, ${input || 'World'}`;
 };
 
-const herro = new HelloWorld;
-console.log(herro.hello('')); // Hello, World
-console.log(herro.hello()); // Hello, World
-console.log(herro.hello('James')); // Hello, James
+// const herro = new HelloWorld;
+// console.log(herro.hello('')); // Hello, World
+// console.log(herro.hello()); // Hello, World
+// console.log(herro.hello('James')); // Hello, James
 
 module.exports = HelloWorld;
 

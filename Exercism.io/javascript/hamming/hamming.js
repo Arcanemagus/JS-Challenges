@@ -18,9 +18,4 @@ class Hamming {
   }
 }
 
-const hamming = new Hamming;
-
-hamming.compute('A', 'A'); // 0
-hamming.compute('A', 'G'); // 1
-hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT'); // 9
-hamming.compute('GGACGGATTCTG', 'AGGAC'); // Error: DNA strands must be of equal length.
+module.exports = Hamming;
