@@ -4,7 +4,4 @@ class Isogram {
   }
 }
 
-const isogram = new Isogram;
-
-isogram.isIsogram('hey'); // false
-isogram.isIsogram('hello'); // true
+module.exports = Isogram;

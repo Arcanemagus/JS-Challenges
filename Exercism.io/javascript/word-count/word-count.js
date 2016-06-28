@@ -24,5 +24,4 @@ class Words {
   }
 }
 
-const words = new Words;
-words.count('olly olly in come free');
+module.exports = Words;

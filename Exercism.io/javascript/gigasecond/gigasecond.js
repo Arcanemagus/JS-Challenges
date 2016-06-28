@@ -11,6 +11,4 @@ class Gigasecond {
   }
 }
 
-const gs = new Gigasecond(new Date(Date.UTC(1959, 6, 19, 5, 13, 45))); // pre-epoch test
-
-gs.date(); // 1991-03-27
+module.exports = Gigasecond;

@@ -26,6 +26,5 @@ ${lyrics.twd}, ${num - 1} ${lyrics.bob} ${lyrics.otw}.\n`;
     return 'Not a number';
   }
 }
-const beersong = new BeerSong;
 
-console.log(beersong.sing(22, 9));
+module.exports = BeerSong;

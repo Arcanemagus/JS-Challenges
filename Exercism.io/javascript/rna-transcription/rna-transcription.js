@@ -17,8 +17,4 @@ class DnaTranscriber {
   }
 }
 
-const dnatranscriber = new DnaTranscriber;
-
-dnatranscriber.toRna('G'); // C
-dnatranscriber.toRna('ACGTGGTCTTAA'); // UGCACCAGAAUU
-dnatranscriber.toRna('HELLO'); // Error: Not a valid DNA sequence
+module.exports = DnaTranscriber;
