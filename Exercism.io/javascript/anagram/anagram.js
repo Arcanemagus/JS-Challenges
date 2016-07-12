@@ -9,7 +9,6 @@ class Anagram {
         return false;
       }
       const matchWith = this.anagram.split('');
-      // const currentWord = word.split('');
       for (const char of word) {
         const index = matchWith.indexOf(char);
         if (index === -1) {
