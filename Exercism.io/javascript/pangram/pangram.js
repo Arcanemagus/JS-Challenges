@@ -23,5 +23,5 @@ class Pangram {
 
 module.exports = Pangram;
 
-const pangram = new Pangram('the quick brown fox jumps over the lazy dog');
+const pangram = new Pangram('"Five quacking Zephyrs jolt my wax bed."');
 console.log(pangram.isPangram());
