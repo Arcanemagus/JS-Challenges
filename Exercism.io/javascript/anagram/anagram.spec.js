@@ -66,6 +66,13 @@ describe('Anagram', () => {
     expect(matches).toEqual([]);
   });
 
+  it('correctly counts characters', () => {
+    const subject = new Anagram('abbccc');
+    const matches = subject.matches(['cabcbc', 'abcccc']);
+
+    expect(matches).toEqual(['cabcbc']);
+  });
+
   it('matches() accepts string arguments', () => {
     const subject = new Anagram('ant');
     const matches = subject.matches('stand', 'tan', 'at');
