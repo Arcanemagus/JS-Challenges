@@ -2,15 +2,16 @@
   "private": true,
   "name": "test",
   "devDependencies": {
-    "eslint": "^2.10.2",
-    "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.0",
+    "eslint": "^3.0.1",
+    "eslint-config-airbnb-base": "^4.0.0",
+    "eslint-plugin-import": "^1.10.3",
     "jasmine-node": "^1.14.5"
   },
   "eslintConfig": {
     "rules": {
-      "no-unused-vars": 1,
-      "no-console": 0
+      "no-unused-vars": "warn",
+      "no-console": "off",
+      "no-prototype-builtins": "off"
     },
     "extends": "airbnb-base",
     "env": {
