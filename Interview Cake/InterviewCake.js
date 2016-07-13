@@ -26,7 +26,7 @@ const prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
 for (let btnNum = 0; btnNum < prizes.length; btnNum++) {
   console.log(btnNum);
       // for each of our buttons, when the user clicks it...
-  document.getElementById(`btn-${btnNum}`).onclick = function() {
+  document.getElementById(`btn-${btnNum}`).onclick = () => {
     console.log(prizes[btnNum]);
   };
 }

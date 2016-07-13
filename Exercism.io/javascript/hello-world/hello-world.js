@@ -20,9 +20,7 @@ function HelloWorld() {
     throw new Error('Cannot call a class as a function');
   }
 }
-HelloWorld.prototype.hello = function (input) {
-  return `Hello, ${input || 'World'}`;
-};
+HelloWorld.prototype.hello = (input) => `Hello, ${input || 'World'}`;
 
 // const herro = new HelloWorld;
 // console.log(herro.hello('')); // Hello, World

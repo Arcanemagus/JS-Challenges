@@ -60,8 +60,12 @@ describe('count()', () => {
 
   it('handles properties that exist on Object’s prototype', () => {
     const expectedCounts = {
-      reserved: 1, words: 1, like: 1,
-      and: 1, tostring: 1, 'ok?': 1,
+      reserved: 1,
+      words: 1,
+      like: 1,
+      and: 1,
+      tostring: 1,
+      'ok?': 1,
       constructor: 1,
     };
     expect(words.count('reserved words like constructor and toString ok?')).toEqual(expectedCounts);

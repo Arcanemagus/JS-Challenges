@@ -52,7 +52,7 @@ const deliveries = [
 // Given an array of deliveries, return an object that contains a key for each
 // destination we deliver to. The value of each key should be how many
 // deliveries we will be making to that destination
-const countPuppiesByLocation = function(deliveries) {
+const countPuppiesByLocation = (deliveries) => {
   // create a return object
   const returnLocations = {};
   // iterate through deliveries
@@ -76,7 +76,7 @@ const countPuppiesByLocation = function(deliveries) {
 // Given an array of deliveries, find the maximum fee you can make
 // from making three deliveries. Include rush delivery fees when possible.
 // The maximum fee for the given data set is 273.5
-const collectMaxThreeDeliveries = function (deliveries) {
+const collectMaxThreeDeliveries = (deliveries) => {
   // iterate through deliveries
   const totals = [];
   let highestValue = 0;

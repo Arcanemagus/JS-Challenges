@@ -2,7 +2,7 @@ const log = document.createElement('div');
 
 // Landon wrote a function to make drawing to the page 1 call
 function addEntry(msg) {
-	console.log(msg);
+  console.log(msg);
   log.appendChild(document.createTextNode(msg));
   log.appendChild(document.createElement('br'));
 }
