@@ -16,9 +16,10 @@ class Words {
     // Leave out the question marks and that kinda stuff and extract words only
     const matches = [];
     const regex = /(\w+)/g;
-    let match;
-    while ((match = regex.exec(chunk)) !== null) {
+    let match = regex.exec(chunk);
+    while (match !== null) {
       matches.push(match[1]);
+      match = regex.exec(chunk);
     }
     return matches;
   }

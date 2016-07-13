@@ -13,7 +13,7 @@ class Parse {
     return url.parse(decodeURIComponent(givenUrl)).search.substr(1).split('&')
     .map(i => i.split('='))
     .reduce((obj, val) => {
-      obj[val[0]] = val[1]
+      obj[val[0]] = val[1];
       return obj;
     }, {});
   }
