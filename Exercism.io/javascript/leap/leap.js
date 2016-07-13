@@ -3,8 +3,13 @@
 // If the year is divisible by 4, 100, and 400 it is a leap year.
 
 class Year {
-  isLeap(year) {
-    return year % 100 === 0 && year % 400 === 0 || year % 4 === 0 && year % 100 !== 0;
+  constructor(year) {
+    this.year = year;
+  }
+
+  isLeap() {
+    return this.year % 100 === 0 && this.year % 400 === 0 || this.year % 4 === 0
+    && this.year % 100 !== 0;
   }
 }
 
