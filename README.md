@@ -2,8 +2,8 @@
 
 ### Sources:
 
- * [Coderbyte](coderbyte.com)
- * [Exercism.io](exercism.io)
- * [Interview Cake](interviewcake.com)
- * [Project Euler](projecteuler.net)
+ * [Coderbyte](http://coderbyte.com)
+ * [Exercism.io](http://exercism.io)
+ * [Interview Cake](http://interviewcake.com)
+ * [Project Euler](http://projecteuler.net)
  * Some personal misc challenges that I liked
