@@ -20,5 +20,5 @@ class Anagram {
     }).filter(i => i);
   }
 }
-const anagram = new Anagram('Orchestra');
-console.log(anagram.matches(['cashregister', 'Carthorse', 'radishes']));
+
+module.exports = Anagram;
