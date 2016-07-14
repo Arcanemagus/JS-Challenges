@@ -67,7 +67,7 @@ class FoodChain {
   verses(start, end) {
     const sing = [];
     // Make sure params are numbers
-    if (typeof end !== 'number' && typeof start !== 'number') {
+    if (typeof end !== 'number' || typeof start !== 'number') {
       return 'Not a number';
     }
     for (let i = start; i <= end; i++) {
