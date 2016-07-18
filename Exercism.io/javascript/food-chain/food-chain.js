@@ -68,13 +68,12 @@ class FoodChain {
     const sing = [];
     // Make sure params are numbers
     if (typeof end !== 'number' || typeof start !== 'number') {
-      return 'Not a number';
+      throw new Error('Not a number');
     }
     for (let i = start; i <= end; i++) {
       sing.push(this.verse(i));
-      sing.push('\n'); // Jasmine spec requires this extra newline
     }
-    return sing.join('');
+    return `${sing.join('\n')}\n`;
   }
 }
 
